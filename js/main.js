@@ -161,6 +161,16 @@ add.addEventListener('click' ,()=>{
 
 })
 
+
+
+
+let delete_btn = document.querySelectorAll('.delete');
+
+  delete_btn.forEach((btn)=>{
+      btn.addEventListener('click',()=>{
+          btn.parentElement.remove();
+      })
+  });
 // let check_btn = document.querySelectorAll('.check');
 
 //   check_btn.forEach((btn) => {
