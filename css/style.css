@@ -1,0 +1,322 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Josefin Sans;
+}
+
+/* ======  main dark theme  ====== */
+
+:root{
+  --Very-Dark-Blue: hsl(235, 21%, 11%);
+  --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+  --Light-Grayish-Blue: hsl(234, 39%, 85%);
+  --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+  --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+  --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+  --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+}
+
+/* ======  main light theme  ====== */
+
+body.light-theme{
+--Very-Light-Gray: hsl(0, 0%, 98%);
+--Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+--Light-Grayish-Blue: hsl(233, 11%, 84%);
+--Dark-Grayish-Blue: hsl(236, 9%, 61%);
+--Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+}
+
+
+/* ====== body ========= */
+body{
+  background-color: var(--Very-Dark-Blue);
+  font-weight: 400;
+  overflow-x: hidden;
+  transition: .4s;
+}
+body.light-theme{
+  background-color: var(--Very-Light-Gray);
+  }
+/* ====== header ======= */
+
+header{
+  width: 100%;
+  height: 40vh;
+  background-image: url(../images/bg-desktop-dark.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  transition: .4s;
+}
+body.light-theme header.light-themes{
+  width: 100%;
+  background-image: url(../images/bg-desktop-light.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+}
+header .header .main ,
+header .header .input{
+  width: 100%;
+}
+header .header .main {
+  margin: 4rem 0 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .header .main  h1{
+  color: var(--Light-Grayish-Blue);
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  /* margin-bottom: 1rem; */
+  letter-spacing: 1rem;
+}
+header .header .input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+header .header .input input{
+  height: 4rem;
+  padding: 0 0 0 1rem;
+  font-size: 1.5rem;
+  position: relative;
+}
+.form-control{
+  color: var(--Light-Grayish-Blue);
+  background-color: var(--Very-Dark-Desaturated-Blue);
+  border: none;
+  transition: .4s;
+}
+.form-control:focus {
+  color: var(--Light-Grayish-Blue);
+  background-color: var(--Very-Dark-Desaturated-Blue);
+  border-color: var(--Dark-Grayish-Blue);
+  box-shadow: 0 0 0 0.25rem hsla(233, 11%, 52%, 0.559);
+}
+body.light-theme .form-control.light-themes{
+  color: var(--Very-Dark-Desaturated-Blue);
+  background-color: var(--Light-Grayish-Blue);
+  border: none;
+}
+body.light-theme .form-control.light-themes:focus {
+  color: var(--Very-dark-Grayish-Blue);
+  border-color: var(--Dark-Grayish-Blue);
+  box-shadow: 0 0 0 0.25rem hsla(235, 21%, 11%, 0.637);
+}
+header .header .input i{
+  position: absolute;
+  right: 1rem;
+  color: var(--Light-Grayish-Blue);
+  font-size: 24px;
+  cursor: pointer;
+}
+header .header .input i:hover{
+  color: var(--Light-Grayish-Blue-hover);
+}
+header .header .input i.light-themes{
+  color: var(--Very-Dark-Desaturated-Blue);
+}
+header .header .input i.light-themes:hover{
+  color: var(--Very-Dark-Blue);
+}
+header .header .theme img{
+  cursor: pointer;
+  width: 40px;
+}
+
+header .header .theme img.moon{
+  display: none;
+}
+
+section.list .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+
+}
+section.list .items{
+  width: 60%;
+  background-color: var(--Very-Dark-Desaturated-Blue);
+  border-radius: 0.375rem;
+}
+body.light-theme section.list .items.light-themes{
+  background-color: var(--Very-Light-Grayish-Blue);
+}
+.list .items .item{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: .5rem 1rem;
+  border-bottom: 1px solid var(--Light-Grayish-Blue);
+  position: relative;
+  transition: .4s;
+}
+body.light-theme .list .items .item.light-themes{
+  border-bottom: 1px solid var(--Very-Dark-Blue);
+}
+.list .items .item p{
+  margin-left: 1rem;
+  text-align: start;
+  vertical-align: middle;
+  font-size: 22px;
+  padding-top: .7rem;
+  color: var(--Light-Grayish-Blue-hover);
+}
+
+.list .items .item p.done{
+  text-decoration: line-through;
+  color: var(--Light-Grayish-Blue);
+  opacity: .7;
+}
+body.light-theme .list .items .item p.light-themes{
+  color: var(--Very-Dark-Blue);
+}
+.list .items .item i.delete{
+  color: var(--Light-Grayish-Blue);
+  font-size: 24px;
+  cursor: pointer;
+  transition: .4s;
+  position: absolute;
+  right: 1rem;
+  top: calc(var(--font) * -8 / (9/1));
+}
+body.light-theme .list .items .item i.delete.light-themes{
+  color: var(--Very-Dark-Blue);
+}
+.list .items .item .check{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid var(--Light-Grayish-Blue);
+  cursor: pointer;
+  overflow: hidden;
+}
+.list .items .item .check .img{
+  background-image: linear-gradient(#2F20A9 , #751B75);
+  display: none;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.list .items .item .check .img.back-color{
+  display: flex;
+}
+.list .items .item .check .img img{
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  object-position: center;
+  display: none;
+}
+.list .items .item .check .img img.checked-icon{
+  display: block;
+}
+/* #2F20A9 */
+/* #751B75 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========= media query ========== */
+@media (max-width : 1024px) {
+  header{
+    height: 45vh;
+  }
+}
+/*==============*/
+
+@media (max-width : 768px) {
+  header{
+    height: 40vh;
+  }
+  header .header {
+    width: 80%;
+}
+section.list .items{
+  width: 80%;
+}
+}
+/*==============*/
+
+@media (max-width : 425px) {
+  header{
+    background-image: url(../images/bg-mobile-dark.jpg);
+    height: 35vh;
+  }
+  header .header {
+    width: 90%;
+}
+  header.light-themes{
+    background-image: url(../images/bg-mobile-light.jpg);
+  }
+  header .header .main {
+    margin: 3rem 0 1rem 0;
+}
+header .header .input input {
+  padding: 0 0 0 1rem;
+}
+section.list .items{
+  width: 90%;
+}
+.list .items .item p {
+  margin-left: 0rem;
+  font-size: 20px;
+  padding: 0.7rem 0px 0 0.4rem;
+}
+}
